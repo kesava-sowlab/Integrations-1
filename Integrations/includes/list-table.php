@@ -5,7 +5,6 @@ if (!class_exists('WP_List_Table')) {
 }
 
 class IGM_Mapping_List_Table extends WP_List_Table {
-    private $data;
 
     public function __construct() {
         parent::__construct([

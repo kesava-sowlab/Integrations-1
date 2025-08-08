@@ -101,7 +101,6 @@ function igm_check_and_update_course_names() {
                 igm_log_action('space_group_updated', "Updated Circle space group {$stored->space_group_id} to '{$current_name}'");
                 
                     igm_save_circle_space_group($course_id, $stored->space_group_id, $current_name, $current_slug);
-                } else {
                 }
             }
         }
@@ -159,7 +158,6 @@ function igm_delete_space_groups_for_removed_courses() {
                 if ($code === 204 || $code === 200) {
                     igm_log_action('space_group_deleted', "Deleted Circle space group{$space_group_id} for removed course {$row['course_id']}");
                     $wpdb->delete($table, ['course_id' => $row['course_id']]);
-                } else {
                 }
             }
         }
